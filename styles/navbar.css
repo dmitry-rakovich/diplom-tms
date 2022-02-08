@@ -1,0 +1,37 @@
+nav {
+    background: #FEFEFE;
+    padding: 17px 0;
+}
+
+.navbar__item {
+    position: relative;
+}
+
+.navbar__logo {
+font-style: normal;
+font-weight: 500;
+font-size: 18px;
+line-height: 21px;
+color: #3260A1;
+}
+
+.addpost__btn {
+    font-style: normal;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 16px;
+    color: #FFFFFF;
+    position: absolute;
+    width: 139px;
+    height: 25px;
+    background: #67BFFF;
+    box-shadow: 0px 10px 25px rgba(148, 174, 213, 0.15);
+    border-radius: 15px;
+    border: none;
+    left: calc(50% - 139px/2 - 13.5px);
+    top: 25px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
