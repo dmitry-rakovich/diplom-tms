@@ -1,0 +1,41 @@
+.wrapper {
+    min-height: 100vh;
+    background: #EEF5FF;
+    width: 100%;
+    padding-bottom: 100px;
+}
+
+.wrapper_posts {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 3rem;
+}
+
+.wrapper_post {
+    width: 35rem;
+    height: 27rem;
+    border-radius: 1.5rem;
+    margin-top: 5rem;
+    position: relative;
+    cursor: pointer;  
+}
+
+.wrapper_post:hover {
+    transform: scale(1.1);
+    transition: .3s all ease;
+}
+
+.wrapper_post_title {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1.8rem;
+    line-height: 2.1rem;
+    padding: 1.5rem 2rem;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    color: #3260A1;
+    background: white;
+    border-radius: 0 0 1.5rem 1.5rem;
+}

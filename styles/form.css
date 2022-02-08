@@ -1,0 +1,62 @@
+.form_wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10rem;
+}
+
+.form {
+    background: #FFF;
+    border-radius: 15px;
+    padding: 30px;
+    max-width: 500px;
+    width: 100%;
+}
+
+.input_field {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+}
+
+input, textarea {
+    width: 100%;
+    display: flex;
+    border: 1px solid #E5E5E5;
+    box-sizing: border-box;
+    border-radius: 5px;
+    outline: none;
+    padding: 5px 10px;
+}
+
+.textarea {
+    min-height: 150px;
+    resize: none;
+    margin-bottom: 5px;
+}
+
+.label {
+    font-style: normal;
+    font-weight: 300;
+    line-height: 21px;
+    margin-bottom: 5px;
+    color: #222222;
+}
+
+.btn_addpost {
+    font-style: normal;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 16px;
+    text-align: center;
+    color: #FFFFFF;
+    background: #67BFFF;
+    box-shadow: 0px 10px 25px rgba(148, 174, 213, 0.15);
+    border-radius: 10px;
+    width: 139px;
+    height: 33px;
+    border: none;
+    margin-top: 15px;
+    margin: 0 auto;
+    cursor: pointer;
+}
