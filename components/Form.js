@@ -7,6 +7,7 @@ export default function Form() {
   const [text, setText] = useState("");
   const [imgUrl, setImgUrl] = useState("");
   const router = useRouter();
+  
   const addPost = async () => {
     try {
       await axios
