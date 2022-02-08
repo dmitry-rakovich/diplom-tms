@@ -2,7 +2,7 @@ import Head from "next/head";
 import Navbar from "../components/Navbar";
 import Wrapper from "../components/Wrapper";
 
-export default function Home({ posts }) {
+export default function Home() {
   return (
     <div>
       <Head>
@@ -11,22 +11,7 @@ export default function Home({ posts }) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Navbar />
-      <Wrapper posts={posts} />
+      <Wrapper />
     </div>
   );
-}
-
-export async function getServerSideProps() {
-  const res = await fetch(`http://localhost:5000/api/post`);
-  const posts = await res.json();
-
-  if (!posts) {
-    return {
-      notFound: true,
-    };
-  }
-
-  return {
-    props: { posts }, // will be passed to the page component as props
-  };
 }
