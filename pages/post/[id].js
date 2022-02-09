@@ -3,22 +3,20 @@ import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import axios from "axios";
-import { NavigationLayout } from "../../components/NavigationLayout";
 
 export default function Post({ post }) {
   const router = useRouter();
   const removePost = async () => {
-    const result = confirm('Вы дейстительно хотите удалить?')
-    if(result){
-      await axios
+    await axios
       .post("http://localhost:5000/api/post/remove", { postId: post._id })
       .then(() => {
         router.push("/");
       });
-    }
   };
   return (
-    <NavigationLayout title={post.title}>
+    <>
+      <div className="wrapper">
+        <Navbar />
         <Link href="/">
           <a className="btn_back">
             <Image
@@ -46,17 +44,20 @@ export default function Post({ post }) {
               ></img>
             </div>
             <a onClick={removePost} className="removepost__btn">
-              Удалить пост
+              Удалить статью
             </a>
           </div>
         </div>
-    </NavigationLayout>
+      </div>
+    </>
   );
 }
 
 export async function getServerSideProps(context) {
+  console.log(context);
   const res = await fetch(`http://localhost:5000/api/post/${context.query.id}`);
   const post = await res.json();
+  console.log(post);
   if (!post) {
     return {
       notFound: true,

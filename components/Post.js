@@ -1,17 +1,6 @@
 import Link from "next/link";
-import { createAsyncThunk } from "@reduxjs/toolkit";
-import { useDispatch, useSelector } from "react-redux";
-import { useEffect } from "react";
 
-export default function Post() {
-
-  const dispatch = useDispatch()
-  
-  const posts = useSelector(state => state.posts.posts)
-  
-  useEffect(() => {
-    dispatch(fetchPosts())
-  },[dispatch])
+export default function Post({ posts }) {
   return (
     <>
       {posts.map((post) => {
@@ -29,12 +18,3 @@ export default function Post() {
     </>
   );
 }
-
-export const fetchPosts = createAsyncThunk(
-  'posts/fetchPosts',
-  async function () {
-    const res = await fetch(`http://localhost:5000/api/post`)
-    const data = res.json()
-    return data
-  }
-)

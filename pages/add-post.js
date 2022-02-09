@@ -1,11 +1,13 @@
+import Navbar from "../components/Navbar";
 import Image from "next/image";
 import Form from "../components/form";
 import Link from "next/link";
-import { NavigationLayout } from "../components/NavigationLayout";
 
 export default function AddPost() {
   return (
-    <NavigationLayout title={'Add Post'}>
+    <>
+      <div className="wrapper">
+        <Navbar />
         <Link href="/">
           <a className="btn_back">
             <Image
@@ -20,6 +22,7 @@ export default function AddPost() {
         <div className="container">
           <Form />
         </div>
-    </NavigationLayout>
+      </div>
+    </>
   );
 }
