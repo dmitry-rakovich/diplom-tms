@@ -5,7 +5,7 @@ export default function Wrapper({ posts }) {
     <div className="wrapper">
       <div className="container">
         <div className="wrapper_posts">
-          <Post posts={posts} />
+          <Post />
         </div>
       </div>
     </div>
