@@ -8,11 +8,14 @@ import { NavigationLayout } from "../../components/NavigationLayout";
 export default function Post({ post }) {
   const router = useRouter();
   const removePost = async () => {
-    await axios
+    const result = confirm('Вы дейстительно хотите удалить?')
+    if(result){
+      await axios
       .post("http://localhost:5000/api/post/remove", { postId: post._id })
       .then(() => {
         router.push("/");
       });
+    }
   };
   return (
     <NavigationLayout title={post.title}>
